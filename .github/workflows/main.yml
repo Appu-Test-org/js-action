@@ -1,8 +1,9 @@
 name: PR metadata annotation
 
 on: 
-  push:
-  
+   pull_request:
+    types: [opened, reopened, synchronize]
+
 jobs:
 
   annotate-pr:
@@ -14,5 +15,5 @@ jobs:
         with:
           owner: ${{ github.repository_owner }}
           repo: ${{ github.event.repository.name }}
-          pr_number: '433'
+          pr_number: '4'
           token: ${{ secrets.GITHUB_TOKEN }}
