@@ -2,7 +2,7 @@ name: PR metadata annotation
 
 on: 
   push:
-  
+   types: [opened, reopened, synchronize]
 jobs:
 
   annotate-pr:
